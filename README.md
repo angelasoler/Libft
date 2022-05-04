@@ -1,7 +1,14 @@
-# Libft
-My own version of libc
+<h1 align="center">
+  <img src=https://game.42sp.org.br/static/assets/achievements/libftm.png>
 
-Coding own library of funtion that would be use to develop 42 curriculum projects.
+       My own version of libc
+
+ </h1>
+
+
+
+
+Coding own library of functions that will be use to develop 42 curriculum projects.
 
 Subjects studied:
 
@@ -10,5 +17,3 @@ Subjects studied:
   - Introduction to linked list
   - Unsigned and const data types
   - Header and Mekafile
-
-These Readme is in WIP state
