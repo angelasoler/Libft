@@ -22,17 +22,14 @@ BONUS_OBJ=$(BONUS_SRC:%.c=%.o)
 
 all: $(NAME)
 
-bonus: $(BONUS_OBJ) libft.h
-	ar -rcs $(NAME) $(BONUS_OBJ)
-
 $(NAME): $(OBJ) libft.h
-	ar -rcs $(NAME) $(OBJ)
+	ar -r $(NAME) $(OBJ)
 
-$(OBJ): $(SRC)
-	$(CC) -c $(CFLAGS) $^
+bonus:
+	@make OBJ="$(BONUS_OBJ)"
 
-$(BONUS_OBJ): $(BONUS_SRC)
-	$(CC) -c $(CFLAGS) $^
+%.o: %.c libft.h 
+	$(CC) $(CFLAGS) -c $< -o $@
 
 re: fclean all
 
@@ -40,4 +37,4 @@ fclean: clean
 	rm -rf $(NAME)
 
 clean:
-	rm -rf $(OBJ) $(BONUS_OBJ)
+	rm -rf *.o
